@@ -198,9 +198,9 @@ function App() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   // Numărul actualizat de imagini pentru galerii (17 pentru genți, 17 pentru laser, 17 pentru figurine)
-  const geantaImages = Array.from({ length: 17 }, (_, i) => i + 1); 
+  const geantaImages = Array.from({ length: 18 }, (_, i) => i + 1); 
   const laserImages = Array.from({ length: 17 }, (_, i) => i + 1);    
-  const figurineImages = Array.from({ length: 17 }, (_, i) => i + 1); 
+  const figurineImages = Array.from({ length: 18 }, (_, i) => i + 1); 
 
   // Funcție ajutătoare pentru a decide câte imagini afișăm
   const getVisibleImages = (imagesArray, showAll) => {
