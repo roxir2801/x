@@ -208,7 +208,7 @@ function App() {
   };
 
   return (
-    <div style={{ fontFamily: "'Poppins', sans-serif", color: '#2b2b2b', padding: '20px', maxWidth: '1200px', margin: '0 auto', backgroundColor: backgroundColor }}>
+   <div style={{ fontFamily: "'Poppins', sans-serif", color: '#2b2b2b', padding: '10px', maxWidth: '1200px', margin: '0 auto', backgroundColor: backgroundColor, boxSizing: 'border-box', overflowX: 'hidden' }}>
       
       {/* Header Premium cu Hamburger Menu integrat */}
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #e8e2d5', paddingBottom: '20px', position: 'relative' }}>
@@ -593,7 +593,7 @@ function App() {
       )}
 
       {/* Footer complex */}
-      <footer style={{ borderTop: '1px solid #e8e2d5', padding: '40px 0', color: '#666', fontSize: '13px', backgroundColor: '#fff', borderRadius: '30px 30px 0 0', margin: '0 -20px -20px -20px', paddingLeft: '20px', paddingRight: '20px' }}>
+     <footer style={{ borderTop: '1px solid #e8e2d5', padding: '40px 20px', color: '#666', fontSize: '13px', backgroundColor: '#fff', borderRadius: '30px 30px 0 0', margin: '0 auto', width: '100%', boxSizing: 'border-box' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px', maxWidth: '1200px', margin: '0 auto', textAlign: 'left', marginBottom: '30px' }}>
           <div>
             <h5 style={{ color: brandColor, fontWeight: '800', margin: '0 0 15px 0', fontSize: '14px', letterSpacing: '1px' }}>R&A STUDIO DXB</h5>
