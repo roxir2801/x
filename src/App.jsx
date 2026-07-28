@@ -345,7 +345,7 @@ function App() {
           </div>
         </div>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '30px', marginBottom: '40px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', marginBottom: '40px' }}>
           <div style={{ padding: '10px' }}>
             <h4 style={{ fontSize: '17px', fontWeight: '800', margin: '0 0 4px 0', color: brandColor }}>🎨 Hand-Painted Bags</h4>
             <p style={{ fontSize: '13px', color: '#666', margin: '0 0 15px 0', fontWeight: '500' }}>Every brushstroke tells a story.</p>
@@ -378,7 +378,7 @@ function App() {
       <section id="bags" style={{ marginTop: '120px' }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '30px', borderLeft: `6px solid ${brandColor}`, paddingLeft: '20px', marginBottom: '40px', flexWrap: 'wrap' }}>
           <img src="/logo-bags.jpeg" alt="Bags Logo" style={{ height: '160px', width: '160px', borderRadius: '25px', border: '1px solid #e8e2d5', objectFit: 'cover', boxShadow: '0 8px 25px rgba(0,0,0,0.05)' }} onError={(e) => e.target.style.display = 'none'} />
-          <div style={{ flex: '1 1 400px' }}>
+          <div style={{ flex: '1 1 250px' }}>
             <h3 style={{ fontSize: '32px', fontWeight: '800', margin: 0, color: brandColor }}>Hand Painted Bags</h3>
             <p style={{ color: accentColor, fontWeight: '700', fontSize: '20px', margin: '5px 0 12px 0' }}>Starting from 500 AED</p>
             <p style={{ fontSize: '15px', lineHeight: '1.7', color: '#555', margin: '0 0 20px 0', maxWidth: '800px' }}>
@@ -411,7 +411,7 @@ function App() {
       <section id="laser" style={{ marginTop: '120px' }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '30px', borderLeft: `6px solid ${brandColor}`, paddingLeft: '20px', marginBottom: '40px', flexWrap: 'wrap' }}>
           <img src="/logo-laser.jpeg" alt="Laser Logo" style={{ height: '160px', width: '160px', borderRadius: '25px', border: '1px solid #e8e2d5', objectFit: 'cover', boxShadow: '0 8px 25px rgba(0,0,0,0.05)' }} onError={(e) => e.target.style.display = 'none'} />
-          <div style={{ flex: '1 1 400px' }}>
+          <div style={{ flex: '1 1 250px' }}>
             <h3 style={{ fontSize: '32px', fontWeight: '800', margin: 0, color: brandColor }}>Engraving Services</h3>
             <p style={{ color: accentColor, fontWeight: '700', fontSize: '20px', margin: '5px 0 12px 0' }}>Starting from 150 AED</p>
             <p style={{ fontSize: '15px', lineHeight: '1.7', color: '#555', margin: '0 0 10px 0', maxWidth: '800px' }}>
@@ -452,7 +452,7 @@ function App() {
       <section id="figurines" style={{ marginTop: '120px' }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '30px', borderLeft: `6px solid ${brandColor}`, paddingLeft: '20px', marginBottom: '40px', flexWrap: 'wrap' }}>
           <img src="/logo-figurines.jpeg" alt="Figurines Logo" style={{ height: '160px', width: '160px', borderRadius: '25px', border: '1px solid #e8e2d5', objectFit: 'cover', boxShadow: '0 8px 25px rgba(0,0,0,0.05)' }} onError={(e) => e.target.style.display = 'none'} />
-          <div style={{ flex: '1 1 400px' }}>
+          <div style={{ flex: '1 1 250px' }}>
             <h3 style={{ fontSize: '32px', fontWeight: '800', margin: 0, color: brandColor }}>3D Printed Hand Painted Figures</h3>
             <p style={{ color: accentColor, fontWeight: '700', fontSize: '20px', margin: '5px 0 12px 0' }}>Starting from 400 AED</p>
             <p style={{ fontSize: '15px', lineHeight: '1.7', color: '#555', margin: '0 0 20px 0', maxWidth: '800px' }}>
@@ -527,8 +527,8 @@ function App() {
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ padding: '20px', borderBottom: '1px solid #e8e2d5', display: 'flex', alignItems: 'center', gap: '25px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '40px', maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ padding: '20px', borderBottom: '1px solid #e8e2d5', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '15px' }}>
             <img src="/logo-bags.jpeg" alt="Bags" style={{ height: '140px', width: '140px', borderRadius: '22px', objectFit: 'cover', border: '1px solid #e8e2d5', boxShadow: '0 6px 20px rgba(0,0,0,0.04)' }} onError={(e) => e.target.style.display = 'none'} />
             <div style={{ textAlign: 'left' }}>
               <h4 style={{ margin: '0 0 6px 0', fontSize: '16px', fontWeight: '700', color: brandColor }}>Hand Painted Bags</h4>
