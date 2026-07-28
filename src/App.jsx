@@ -302,8 +302,8 @@ function App() {
 
       {/* HERO SECTION */}
       {/* HERO SECTION */}
-      <section className="stack-on-mobile" style={{ gap: '50px', alignItems: 'center', marginTop: '50px', minHeight: '500px' }}>
-        <div style={{ flex: '1 1 500px', paddingRight: '10px' }}>
+      <section style={{ display: 'flex', flexWrap: 'wrap-reverse', gap: '50px', alignItems: 'center', marginTop: '50px', minHeight: '500px' }}>
+        <div style={{ flex: '1 1 300px', paddingRight: '10px' }}>
           <h2 style={{ fontSize: '42px', fontWeight: '800', lineHeight: '1.2', marginBottom: '25px', color: brandColor }}>
             Our Vision, Our Artistry
           </h2>
@@ -325,7 +325,7 @@ function App() {
           <a href="#contact" style={{ display: 'inline-block', marginTop: '35px', padding: '16px 36px', backgroundColor: brandColor, color: '#fff', textDecoration: 'none', borderRadius: '30px', fontWeight: '700', fontSize: '15px', boxShadow: '0 10px 20px rgba(0,0,0,0.15)' }}>Start Your Project</a>
         </div>
         
-        <div style={{ flex: '1 1 400px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
+        <div style={{ flex: '1 1 300px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
           <div style={{ width: '100%', maxWidth: '420px', aspectRatio: '1/1', borderRadius: '30px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.06)', border: '8px solid #fff', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img src="/logo-ra-studio.jpeg" alt="R&A Studio Master Logo" style={{ width: '95%', height: '95%', objectFit: 'contain' }} />
           </div>
@@ -487,7 +487,7 @@ function App() {
       {/* SECTIUNE LOCATIE */}
       <section id="location" style={{ marginTop: '120px', backgroundColor: '#fff', padding: '60px 40px', borderRadius: '45px', border: '1px solid #e8e2d5', boxShadow: '0 15px 35px rgba(0,0,0,0.02)' }}>
         <div className="stack-on-mobile" style={{ alignItems: 'center', gap: '40px' }}>
-          <div style={{ flex: '1 1 400px' }}>
+          <div style={{ flex: '1 1 300px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: accentColor, fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '14px', marginBottom: '10px' }}>
               <span>✈️ International Hub</span>
             </div>
@@ -499,7 +499,7 @@ function App() {
               📍 Open Dubai Pin Map
             </a>
           </div>
-          <div style={{ flex: '1 1 400px', height: '300px', backgroundColor: backgroundColor, borderRadius: '30px', overflow: 'hidden', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px dashed #bcae97' }}>
+          <div style={{ flex: '1 1 300px', height: '300px', backgroundColor: backgroundColor, borderRadius: '30px', overflow: 'hidden', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px dashed #bcae97' }}>
             <div style={{ textAlign: 'center', padding: '20px' }}>
               <div style={{ fontSize: '50px', marginBottom: '10px' }}>✈️</div>
               <div style={{ fontSize: '24px', fontWeight: '800', letterSpacing: '4px', color: brandColor }}>DXB</div>
