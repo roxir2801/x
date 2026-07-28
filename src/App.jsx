@@ -208,11 +208,218 @@ function App() {
   };
 
   return (
-    <div style={{ fontFamily: "'Poppins', sans-serif", color: '#2b2b2b', padding: '20px', maxWidth: '1200px', margin: '0 auto', backgroundColor: backgroundColor }}>
+    <div className="app-container" style={{ fontFamily: "'Poppins', sans-serif", color: '#2b2b2b', padding: '20px', maxWidth: '1200px', margin: '0 auto', backgroundColor: backgroundColor }}>
+      <style>{`
+        .app-container {
+          min-height: 100vh;
+        }
+        .app-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #e8e2d5;
+          padding-bottom: 20px;
+          position: relative;
+          gap: 20px;
+        }
+        .brand-row {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          width: 100%;
+        }
+        .hero-section {
+          display: flex;
+          gap: 50px;
+          align-items: center;
+          margin-top: 50px;
+          flex-wrap: wrap-reverse;
+          min-height: 500px;
+        }
+        .hero-copy {
+          flex: 1 1 500px;
+          padding-right: 10px;
+        }
+        .hero-image-wrap {
+          flex: 1 1 400px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+        }
+        .section-block {
+          margin-top: 120px;
+        }
+        .section-card {
+          background-color: #fff;
+          padding: 50px 30px;
+          border-radius: 35px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.01);
+          border: 1px solid #e8e2d5;
+        }
+        .video-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+          gap: 30px;
+          margin-bottom: 40px;
+        }
+        .gallery-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: 25px;
+        }
+        .gallery-item {
+          background-color: #fff;
+          border-radius: 24px;
+          overflow: hidden;
+          border: 1px solid #e8e2d5;
+          height: 320px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+          cursor: zoom-in;
+        }
+        .contact-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 40px;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        .contact-card {
+          padding: 20px;
+          border-bottom: 1px solid #e8e2d5;
+          display: flex;
+          align-items: center;
+          gap: 25px;
+        }
+        .footer-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+          max-width: 1200px;
+          margin: 0 auto;
+          text-align: left;
+          margin-bottom: 30px;
+        }
+        .section-top {
+          display: flex;
+          align-items: flex-start;
+          gap: 30px;
+          border-left: 6px solid ${brandColor};
+          padding-left: 20px;
+          margin-bottom: 40px;
+          flex-wrap: wrap;
+        }
+        .section-top img {
+          height: 160px;
+          width: 160px;
+          border-radius: 25px;
+          border: 1px solid #e8e2d5;
+          object-fit: cover;
+          box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+        }
+        .section-top .section-text {
+          flex: 1 1 400px;
+        }
+        .gallery-showmore {
+          text-align: center;
+          margin-top: 30px;
+        }
+        .gallery-showmore button {
+          padding: 10px 30px;
+          background-color: transparent;
+          border: 2px solid ${brandColor};
+          border-radius: 25px;
+          font-weight: 700;
+          cursor: pointer;
+          color: ${brandColor};
+          font-size: 14px;
+        }
+        @media (max-width: 768px) {
+          .app-container {
+            padding: 16px;
+          }
+          .app-header {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .nav-menu {
+            width: 100%;
+          }
+          .hero-section {
+            min-height: auto;
+            gap: 24px;
+          }
+          .hero-copy,
+          .hero-image-wrap {
+            flex: 1 1 100%;
+            width: 100%;
+            padding-right: 0;
+          }
+          .hero-section h2 {
+            font-size: 30px;
+          }
+          .hero-section a {
+            width: 100%;
+            text-align: center;
+          }
+          .section-card {
+            padding: 35px 20px;
+          }
+          .video-grid {
+            grid-template-columns: 1fr;
+          }
+          .section-top {
+            padding-left: 0;
+            border-left: none;
+            flex-direction: column;
+          }
+          .section-top img {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            margin-bottom: 10px;
+          }
+          .gallery-grid {
+            gap: 18px;
+          }
+          .gallery-item {
+            height: auto;
+            min-height: 220px;
+          }
+          .gallery-item img {
+            min-height: 220px;
+          }
+          .contact-grid {
+            gap: 20px;
+          }
+          .contact-card {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+          }
+          .contact-card img {
+            width: 120px;
+            height: 120px;
+          }
+          .footer-grid {
+            grid-template-columns: 1fr;
+            text-align: center;
+          }
+          .footer-grid div {
+            margin: 0 auto;
+          }
+          .back-to-top {
+            width: 100%;
+          }
+        }
+      `}</style>
       
       {/* Header Premium cu Hamburger Menu integrat */}
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #e8e2d5', paddingBottom: '20px', position: 'relative' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+      <header className="app-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #e8e2d5', paddingBottom: '20px', position: 'relative' }}>
+        <div className="brand-row">
           <img 
             src="/logo-ra-studio.jpeg" 
             alt="R&A Studio DXB Logo" 
@@ -287,8 +494,8 @@ function App() {
       </header>
 
       {/* HERO SECTION */}
-      <section style={{ display: 'flex', gap: '50px', alignItems: 'center', marginTop: '50px', flexWrap: 'wrap-reverse', minHeight: '500px' }}>
-        <div style={{ flex: '1 1 500px', paddingRight: '10px' }}>
+      <section className="hero-section" style={{ display: 'flex', gap: '50px', alignItems: 'center', marginTop: '50px', flexWrap: 'wrap-reverse', minHeight: '500px' }}>
+        <div className="hero-copy" style={{ flex: '1 1 500px', paddingRight: '10px' }}>
           <h2 style={{ fontSize: '42px', fontWeight: '800', lineHeight: '1.2', marginBottom: '25px', color: brandColor }}>
             Our Vision, Our Artistry
           </h2>
@@ -310,7 +517,7 @@ function App() {
           <a href="#contact" style={{ display: 'inline-block', marginTop: '35px', padding: '16px 36px', backgroundColor: brandColor, color: '#fff', textDecoration: 'none', borderRadius: '30px', fontWeight: '700', fontSize: '15px', boxShadow: '0 10px 20px rgba(0,0,0,0.15)' }}>Start Your Project</a>
         </div>
         
-        <div style={{ flex: '1 1 400px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
+        <div className="hero-image-wrap" style={{ flex: '1 1 400px', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
           <div style={{ width: '100%', maxWidth: '420px', aspectRatio: '1/1', borderRadius: '30px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.06)', border: '8px solid #fff', backgroundColor: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img src="/logo-ra-studio.jpeg" alt="R&A Studio Master Logo" style={{ width: '95%', height: '95%', objectFit: 'contain' }} />
           </div>
@@ -321,7 +528,7 @@ function App() {
       <HowItWorksSection />
 
       {/* Behind the Scenes VIDEOS */}
-      <section id="process" style={{ marginTop: '120px', backgroundColor: '#fff', padding: '50px 30px', borderRadius: '35px', boxShadow: '0 10px 30px rgba(0,0,0,0.01)', border: '1px solid #e8e2d5' }}>
+      <section id="process" className="section-card section-block" style={{ marginTop: '120px', backgroundColor: '#fff', padding: '50px 30px', borderRadius: '35px', boxShadow: '0 10px 30px rgba(0,0,0,0.01)', border: '1px solid #e8e2d5' }}>
         <div style={{ textAlign: 'center', marginBottom: '45px' }}>
           <h3 style={{ fontSize: '32px', fontWeight: '800', color: brandColor, margin: '0 0 10px 0' }}>The Art in Motion</h3>
           <div style={{ color: '#555', fontSize: '15px', lineHeight: '1.6', maxWidth: '700px', margin: '0 auto' }}>
@@ -330,7 +537,7 @@ function App() {
           </div>
         </div>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '30px', marginBottom: '40px' }}>
+        <div className="video-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '30px', marginBottom: '40px' }}>
           <div style={{ padding: '10px' }}>
             <h4 style={{ fontSize: '17px', fontWeight: '800', margin: '0 0 4px 0', color: brandColor }}>🎨 Hand-Painted Bags</h4>
             <p style={{ fontSize: '13px', color: '#666', margin: '0 0 15px 0', fontWeight: '500' }}>Every brushstroke tells a story.</p>
@@ -360,10 +567,10 @@ function App() {
       </section>
 
       {/* CATEGORIA 1: Hand Painted Bags */}
-      <section id="bags" style={{ marginTop: '120px' }}>
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '30px', borderLeft: `6px solid ${brandColor}`, paddingLeft: '20px', marginBottom: '40px', flexWrap: 'wrap' }}>
+      <section id="bags" className="section-block" style={{ marginTop: '120px' }}>
+        <div className="section-top" style={{ display: 'flex', alignItems: 'flex-start', gap: '30px', borderLeft: `6px solid ${brandColor}`, paddingLeft: '20px', marginBottom: '40px', flexWrap: 'wrap' }}>
           <img src="/logo-bags.jpeg" alt="Bags Logo" style={{ height: '160px', width: '160px', borderRadius: '25px', border: '1px solid #e8e2d5', objectFit: 'cover', boxShadow: '0 8px 25px rgba(0,0,0,0.05)' }} onError={(e) => e.target.style.display = 'none'} />
-          <div style={{ flex: '1 1 400px' }}>
+          <div className="section-text" style={{ flex: '1 1 400px' }}>
             <h3 style={{ fontSize: '32px', fontWeight: '800', margin: 0, color: brandColor }}>Hand Painted Bags</h3>
             <p style={{ color: accentColor, fontWeight: '700', fontSize: '20px', margin: '5px 0 12px 0' }}>Starting from 500 AED</p>
             <p style={{ fontSize: '15px', lineHeight: '1.7', color: '#555', margin: '0 0 20px 0', maxWidth: '800px' }}>
@@ -374,9 +581,9 @@ function App() {
         </div>
 
         {/* Galerie Genți cu Zoom integrat și Show More */}
-       <div className="gallery-grid">
+        <div className="gallery-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '25px' }}>
           {getVisibleImages(geantaImages, showAllBags).map((num) => (
-            <div 
+            <div className="gallery-item"
               key={num} 
               onClick={() => setSelectedImage({ src: `/geanta${num}.jpeg`, alt: `Hand-Painted Bag ${num}` })}
               style={{ backgroundColor: '#fff', borderRadius: '24px', overflow: 'hidden', border: '1px solid #e8e2d5', height: '320px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 15px rgba(0,0,0,0.02)', cursor: 'zoom-in' }}
@@ -385,7 +592,7 @@ function App() {
             </div>
           ))}
         </div>
-        <div style={{ textAlign: 'center', marginTop: '30px' }}>
+        <div className="gallery-showmore" style={{ textAlign: 'center', marginTop: '30px' }}>
           <button onClick={() => setShowAllBags(!showAllBags)} style={{ padding: '10px 30px', backgroundColor: 'transparent', border: `2px solid ${brandColor}`, borderRadius: '25px', fontWeight: '700', cursor: 'pointer', color: brandColor, fontSize: '14px' }}>
             {showAllBags ? 'Show Less' : `Show All Gallery (+${geantaImages.length - 4} photos)`}
           </button>
@@ -393,10 +600,10 @@ function App() {
       </section>
 
       {/* CATEGORIA 2: Engraving Services */}
-      <section id="laser" style={{ marginTop: '120px' }}>
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '30px', borderLeft: `6px solid ${brandColor}`, paddingLeft: '20px', marginBottom: '40px', flexWrap: 'wrap' }}>
+      <section id="laser" className="section-block" style={{ marginTop: '120px' }}>
+        <div className="section-top" style={{ display: 'flex', alignItems: 'flex-start', gap: '30px', borderLeft: `6px solid ${brandColor}`, paddingLeft: '20px', marginBottom: '40px', flexWrap: 'wrap' }}>
           <img src="/logo-laser.jpeg" alt="Laser Logo" style={{ height: '160px', width: '160px', borderRadius: '25px', border: '1px solid #e8e2d5', objectFit: 'cover', boxShadow: '0 8px 25px rgba(0,0,0,0.05)' }} onError={(e) => e.target.style.display = 'none'} />
-          <div style={{ flex: '1 1 400px' }}>
+          <div className="section-text" style={{ flex: '1 1 400px' }}>
             <h3 style={{ fontSize: '32px', fontWeight: '800', margin: 0, color: brandColor }}>Engraving Services</h3>
             <p style={{ color: accentColor, fontWeight: '700', fontSize: '20px', margin: '5px 0 12px 0' }}>Starting from 150 AED</p>
             <p style={{ fontSize: '15px', lineHeight: '1.7', color: '#555', margin: '0 0 10px 0', maxWidth: '800px' }}>
@@ -415,9 +622,9 @@ function App() {
         </div>
 
         {/* Galerie Laser cu Zoom și Show More (Actualizat la 17 imagini!) */}
-       <div className="gallery-grid">
+        <div className="gallery-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '25px', display: 'grid' }}>
           {getVisibleImages(laserImages, showAllLaser).map((num) => (
-            <div 
+            <div className="gallery-item"
               key={num} 
               onClick={() => setSelectedImage({ src: `/laser${num}.jpeg`, alt: `Laser Custom Work ${num}` })}
               style={{ backgroundColor: '#fff', borderRadius: '24px', overflow: 'hidden', border: '1px solid #e8e2d5', height: '320px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 15px rgba(0,0,0,0.02)', cursor: 'zoom-in' }}
@@ -426,7 +633,7 @@ function App() {
             </div>
           ))}
         </div>
-        <div style={{ textAlign: 'center', marginTop: '30px' }}>
+        <div className="gallery-showmore" style={{ textAlign: 'center', marginTop: '30px' }}>
           <button onClick={() => setShowAllLaser(!showAllLaser)} style={{ padding: '10px 30px', backgroundColor: 'transparent', border: `2px solid ${brandColor}`, borderRadius: '25px', fontWeight: '700', cursor: 'pointer', color: brandColor, fontSize: '14px' }}>
             {showAllLaser ? 'Show Less' : `Show All Gallery (+${laserImages.length - 4} concepts)`}
           </button>
@@ -434,10 +641,10 @@ function App() {
       </section>
 
       {/* CATEGORIA 3: 3D Printed Hand Painted Figures */}
-      <section id="figurines" style={{ marginTop: '120px' }}>
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '30px', borderLeft: `6px solid ${brandColor}`, paddingLeft: '20px', marginBottom: '40px', flexWrap: 'wrap' }}>
+      <section id="figurines" className="section-block" style={{ marginTop: '120px' }}>
+        <div className="section-top" style={{ display: 'flex', alignItems: 'flex-start', gap: '30px', borderLeft: `6px solid ${brandColor}`, paddingLeft: '20px', marginBottom: '40px', flexWrap: 'wrap' }}>
           <img src="/logo-figurines.jpeg" alt="Figurines Logo" style={{ height: '160px', width: '160px', borderRadius: '25px', border: '1px solid #e8e2d5', objectFit: 'cover', boxShadow: '0 8px 25px rgba(0,0,0,0.05)' }} onError={(e) => e.target.style.display = 'none'} />
-          <div style={{ flex: '1 1 400px' }}>
+          <div className="section-text" style={{ flex: '1 1 400px' }}>
             <h3 style={{ fontSize: '32px', fontWeight: '800', margin: 0, color: brandColor }}>3D Printed Hand Painted Figures</h3>
             <p style={{ color: accentColor, fontWeight: '700', fontSize: '20px', margin: '5px 0 12px 0' }}>Starting from 400 AED</p>
             <p style={{ fontSize: '15px', lineHeight: '1.7', color: '#555', margin: '0 0 20px 0', maxWidth: '800px' }}>
@@ -448,9 +655,9 @@ function App() {
         </div>
 
         {/* Galerie Figurine cu Zoom și Show More */}
-        <div className="gallery-grid">
+        <div className="gallery-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '25px' }}>
           {getVisibleImages(figurineImages, showAllFigurines).map((num) => (
-            <div 
+            <div className="gallery-item"
               key={num} 
               onClick={() => setSelectedImage({ src: `/figurine${num}.jpeg`, alt: `Custom Figurine ${num}` })}
               style={{ backgroundColor: '#fff', borderRadius: '24px', overflow: 'hidden', border: '1px solid #e8e2d5', height: '320px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 15px rgba(0,0,0,0.02)', cursor: 'zoom-in' }}
@@ -459,7 +666,7 @@ function App() {
             </div>
           ))}
         </div>
-        <div style={{ textAlign: 'center', marginTop: '30px' }}>
+        <div className="gallery-showmore" style={{ textAlign: 'center', marginTop: '30px' }}>
           <button onClick={() => setShowAllFigurines(!showAllFigurines)} style={{ padding: '10px 30px', backgroundColor: 'transparent', border: `2px solid ${brandColor}`, borderRadius: '25px', fontWeight: '700', cursor: 'pointer', color: brandColor, fontSize: '14px' }}>
             {showAllFigurines ? 'Show Less' : `Show All Gallery (+${figurineImages.length - 4} photos)`}
           </button>
@@ -548,7 +755,7 @@ function App() {
       </section>
 
       {/* Buton discret "Înapoi sus" */}
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px', marginBottom: '40px' }}>
+      <div className="back-to-top" style={{ display: 'flex', justifyContent: 'center', marginTop: '20px', marginBottom: '40px' }}>
         <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ padding: '12px 24px', backgroundColor: '#fff', border: '1px solid #e8e2d5', borderRadius: '20px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', color: '#555', display: 'flex', alignItems: 'center', gap: '8px', boxShadow: '0 4px 10px rgba(0,0,0,0.02)' }}>
           ↑ Back to Top
         </button>
