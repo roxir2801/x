@@ -169,3 +169,21 @@ html, body {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container, section, header, footer {
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
