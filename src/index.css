@@ -159,3 +159,13 @@ img, video {
   max-width: 100%;
   height: auto;
 }
+/* Forțează întreaga pagină să nu iasă în afara ecranului pe mobil */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
