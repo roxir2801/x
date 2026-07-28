@@ -142,3 +142,20 @@ html, body {
     padding-right: 0 !important;
   }
 }
+/* Oprește orice element să iasă în afara ecranului pe mobil */
+html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
