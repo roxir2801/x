@@ -55,8 +55,8 @@ body {
 }
 
 #root {
-  width: 1126px;
-  max-width: 100%;
+  width: 100%; /* Lăsăm site-ul să fie flexibil */
+  max-width: 1126px;
   margin: 0 auto;
   text-align: center;
   border-inline: 1px solid var(--border);
@@ -64,6 +64,7 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  overflow-x: hidden; /* Ascundem marginile care ar putea ieși în afară */
 }
 
 h1,
@@ -108,4 +109,36 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+/* --- 1. REPARĂ ZOOM-UL PE TELEFON --- */
+html, body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden; /* Taie orice element care vrea să iasă din ecran în lateral */
+}
+
+#root {
+  width: 100% !important; /* Forțează containerul principal să se adapteze */
+  max-width: 100vw !important;
+  overflow-x: hidden;
+}
+
+/* --- 2. MAGIA PENTRU ELEMENTE PE VERTICALĂ --- */
+.stack-on-mobile {
+  display: flex;
+  flex-direction: row; 
+}
+
+@media (max-width: 768px) {
+  .stack-on-mobile {
+    flex-direction: column !important; /* Le forțează una sub alta */
+    gap: 30px !important; /* Lasă un spațiu frumos între ele */
+  }
+  
+  /* Anulează lățimile fixe din React (acel flex: 500px) */
+  .stack-on-mobile > div {
+    width: 100% !important;
+    flex: none !important; 
+    padding-right: 0 !important;
+  }
 }

@@ -252,6 +252,13 @@ function App() {
         <style>{`
           .hamburger-btn { display: none !important; }
           .nav-menu { display: flex !important; align-items: center; }
+          
+          /* CLASA NOUA: Pe PC stau stanga-dreapta */
+          .stack-on-mobile {
+            display: flex;
+            flex-direction: row;
+          }
+
           @media (max-width: 768px) {
             .hamburger-btn { display: flex !important; }
             .nav-menu {
@@ -272,8 +279,15 @@ function App() {
               margin: 10px 0 !important;
               font-size: 16px !important;
             }
+
+            /* CLASA NOUA: Pe Telefon cad una sub alta */
+            .stack-on-mobile {
+              flex-direction: column !important;
+              text-align: center;
+            }
           }
         `}</style>
+         
 
         <nav className="nav-menu">
           <a href="#how-it-works" onClick={() => setIsMenuOpen(false)} style={{ margin: '0 12px', textDecoration: 'none', color: '#555', fontWeight: '600', fontSize: '14px' }}>Process</a>
@@ -287,7 +301,8 @@ function App() {
       </header>
 
       {/* HERO SECTION */}
-      <section style={{ display: 'flex', gap: '50px', alignItems: 'center', marginTop: '50px', flexWrap: 'wrap-reverse', minHeight: '500px' }}>
+      {/* HERO SECTION */}
+      <section className="stack-on-mobile" style={{ gap: '50px', alignItems: 'center', marginTop: '50px', minHeight: '500px' }}>
         <div style={{ flex: '1 1 500px', paddingRight: '10px' }}>
           <h2 style={{ fontSize: '42px', fontWeight: '800', lineHeight: '1.2', marginBottom: '25px', color: brandColor }}>
             Our Vision, Our Artistry
@@ -471,7 +486,7 @@ function App() {
 
       {/* SECTIUNE LOCATIE */}
       <section id="location" style={{ marginTop: '120px', backgroundColor: '#fff', padding: '60px 40px', borderRadius: '45px', border: '1px solid #e8e2d5', boxShadow: '0 15px 35px rgba(0,0,0,0.02)' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '40px', flexWrap: 'wrap' }}>
+        <div className="stack-on-mobile" style={{ alignItems: 'center', gap: '40px' }}>
           <div style={{ flex: '1 1 400px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: accentColor, fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '14px', marginBottom: '10px' }}>
               <span>✈️ International Hub</span>
